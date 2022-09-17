@@ -1,11 +1,10 @@
 project "GLFW"
 	kind "StaticLib"
 	language "C"
-	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-	
+
 	files
 	{
 		"include/GLFW/glfw3.h",
@@ -14,8 +13,9 @@ project "GLFW"
 		"src/context.c",
 		"src/init.c",
 		"src/input.c",
+		"src/monitor.c",
 		"src/vulkan.c",
-		"src/window.c",
+		"src/window.c"
 	}
 	
 	filter "system:windows"
